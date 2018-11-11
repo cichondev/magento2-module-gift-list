@@ -1,0 +1,80 @@
+<?php
+/**
+ * Copyright © 2018 UnknownDevs. All rights reserved.
+ */
+/**
+ * @var $this \UnknownDevs\GiftList\Block\CreateGiftList
+ */
+?>
+<form class="form giftlist create"
+      action="<?php /* @escapeNotVerified */
+      echo $this->getFormAction(); ?>"
+      id="giftlist-form"
+      method="post"
+      data-hasrequired="<?php /* @escapeNotVerified */ echo __('* Required Fields') ?>"
+      data-mage-init='{"validation":{}}'>
+    <fieldset class="fieldset">
+        <legend class="legend">
+            <span><?php /* @escapeNotVerified */ echo __('Create your Gift List.') ?></span>
+        </legend>
+        <br/>
+        <div class="field name required">
+            <label class="label" for="name">
+                <span><?php /* @escapeNotVerified */ echo __('Name') ?></span>
+            </label>
+            <div class="control">
+                <input name="title"
+                       id="title"
+                       title="<?php /* @escapeNotVerified */ echo __('Title') ?>"
+                       value="<?php echo $this->escapeHtml($this->helper('Jute\Ecommerce\Helper\Data')->getUserName()) ?>"
+                       class="input-text"
+                       type="text"
+                       data-validate="{required:true}"/>
+            </div>
+        </div>
+        <div class="field event-date required">
+            <label class="label" for="event_date">
+                <span><?php /* @escapeNotVerified */ echo __('Event date') ?></span>
+            </label>
+            <div class="control">
+                <input name="event_date"
+                       id="event_date"
+                       title="<?php /* @escapeNotVerified */ echo __('Event Date') ?>"
+                       value="<?php echo $this->escapeHtml($this->helper('Jute\Ecommerce\Helper\Data')->getUserEmail()) ?>"
+                       class="input-text"
+                       type="text"
+                       data-validate="{required:true, 'validate-date':true}"/>
+            </div>
+        </div>
+        <div class="field email required">
+            <label class="label" for="email">
+                <span><?php /* @escapeNotVerified */ echo __('Email') ?></span>
+            </label>
+            <div class="control">
+                <input name="email"
+                       id="email"
+                       title="<?php /* @escapeNotVerified */ echo __('Email') ?>"
+                       value="<?php echo $this->escapeHtml($this->helper('Jute\Ecommerce\Helper\Data')->getUserEmail()) ?>"
+                       class="input-text"
+                       type="email"
+                       data-validate="{required:true, 'validate-email':true}"/>
+            </div>
+        </div>
+        <div class="field mobile">
+            <label class="label" for="mobile"><span><?php /* @escapeNotVerified */
+                    echo __('Mobile Number') ?></span></label>
+            <div class="control">
+                <input name="mobile" id="mobile" title="<?php /* @escapeNotVerified */
+                echo __('Mobile Number') ?>" value="" class="input-text" type="text"/>
+            </div>
+        </div>
+    </fieldset>
+    <div class="actions-toolbar">
+        <div class="primary">
+            <input type="hidden" name="hideit" id="hideit" value=""/>
+            <button type="submit" title="<?php /* @escapeNotVerified */ echo __('Submit') ?>" class="action submit primary">
+                <span><?php /* @escapeNotVerified */ echo __('Create List') ?></span>
+            </button>
+        </div>
+    </div>
+</form>

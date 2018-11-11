@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * GiftList
+ *
+ * GiftList Extension for Magento 2.
+ *
+ * @package UnknownDevs\GiftList
+ * @author Edilson Cichon <edilsoncichon@hotmail.com>
+ * @author Paulo Araújo <pauloaraujos@gmail.com>
+ * @copyright Copyright (c) 2018 UnknownDevs (https://unknowndevs.com.br/)
+ * @license https://opensource.org/licenses/OSL-3.0.php Open Software License 3.0
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <title>Gift Lists</title>
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <block class="Magento\Framework\View\Element\Html\Link" name="giftlist-create-link">
+                <arguments>
+                    <argument name="label" xsi:type="string">Create your List</argument>
+                    <argument name="path" xsi:type="string">giftlist/create</argument>
+                </arguments>
+            </block>
+            <block class="UnknownDevs\GiftList\Block\Lists" name="giftlist-list" template="UnknownDevs_GiftList::list.phtml"/>
+        </referenceContainer>
+    </body>
+</page>

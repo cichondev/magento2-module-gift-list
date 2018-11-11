@@ -1,0 +1,71 @@
+<?php
+/**
+ * @var $this UnknownDevs\GiftList\Block\Lists
+ */
+
+$items = [
+    0 => [
+        'name' => 'Fernanda e Edilson',
+        'url' => 'fernanda-e-edilson',
+        'event-date' => '27/08/2017',
+    ],
+    1 => [
+        'name' => 'Paulo e Tia Cachumba =D',
+        'url' => 'paulo-e-tia-cachumba',
+        'event-date' => '01/01/2020',
+    ],
+    2 => [
+        'name' => 'Rafael e Lyn',
+        'url' => 'rafael-e-lyn',
+        'event-date' => '10/10/2021',
+    ],
+    3 => [
+        'name' => 'Eduardo e Gerlane',
+        'url' => 'eduardo-e-gerlane',
+        'event-date' => '27/08/2019',
+    ],
+];
+?>
+
+<div class="column main">
+    <div class="products wrapper grid products-grid">
+        <ol class="products list items product-items">
+            <?php foreach ($items as $item): ?>
+
+                <li class="item product product-item">
+                    <div class="product-item-info" data-container="product-grid">
+                        <a href="<?= $item['url'] ?>"
+                           class="product photo product-item-photo" tabindex="-1">
+                            <span class="product-image-container" style="width:240px;">
+                                <span class="product-image-wrapper" style="padding-bottom: 125%;">
+                                    <img class="product-image-photo"
+                                         src="https://via.placeholder.com/150"
+                                         width="240" height="300" alt="None">
+                                </span>
+                            </span>
+                        </a>
+                        <div class="product details product-item-details">
+                            <strong class="product name product-item-name">
+                                <a class="product-item-link"
+                                   href="<?= $item['url'] ?>"><?= $item['name'] ?></a>
+                            </strong>
+                            <div class="price-box price-final_price" data-role="priceBox" data-product-id="224"
+                                 data-price-box="product-id-224">
+                                <span class="normal-price">
+                                    <span class="price-container price-final_price tax weee">
+                                        <span class="price-label">Date</span>
+                                        <span id="product-price-224" data-price-amount="395"
+                                              data-price-type="finalPrice" class="price-wrapper">
+                                            <span class="price"><?= $item['event-date'] ?></span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+            <?php endforeach; ?>
+        </ol>
+    </div>
+</div>
